@@ -90,6 +90,11 @@ function App() {
 			setShowMobile("block");
 	} 
 
+	const closeMobileNavBar = () => {
+		if (showMobile !== "none")
+			setShowMobile("none");
+	}
+
 	const resetAll = () => {
 		setName("");
 		setPhone("");
@@ -147,6 +152,7 @@ function App() {
 					toggleNavBar={toggleNavBar}
 					showMobile={showMobile}
 					toggleMobileNavBar={toggleMobileNavBar}
+					closeMobileNavBar={closeMobileNavBar}
 					updateName={updateName}
 					updatePhone={updatePhone}
 					updateDate={updateDate}

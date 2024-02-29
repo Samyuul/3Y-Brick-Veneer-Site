@@ -83,7 +83,7 @@ const Lightbox = (props) => {
         <div className="modal">
             <div ref={modalRef} className="modalContent">
                 
-                <div className="stockCounter">{props.stock} <p>Left</p></div>2
+                <div className="stockCounter">{props.stock} <p className="gallery-text">Left</p></div>2
 
                 {/* Main Image Display */}
                 <div className="mySlides">

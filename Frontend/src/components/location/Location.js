@@ -32,12 +32,12 @@ const Location = () => {
         <div id="contact">
             <div id="location">
                 <div id="address">
-                    <address onClick={() => setCenter({lat: 43.30410903683898, lng: -79.86780663703834})}>
+                    <address tabIndex={"0"} onClick={() => setCenter({lat: 43.30410903683898, lng: -79.86780663703834})}>
                             Main Location: <br/>
                             Aldershot Storage and Parking <br/>
                             279 Sumach Dr, Burlington, ON L7R 3X5
                     </address>
-                    <address onClick={() => setCenter({lat: 43.25313823011172, lng: -79.92147746194964})}>
+                    <address tabIndex={"0"} onClick={() => setCenter({lat: 43.25313823011172, lng: -79.92147746194964})}>
                             Secondary Location: <br/>
                             Near West End Pub <br/>
                             151 Emerson St, Hamilton, ON L8S 2Y1

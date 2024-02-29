@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./index.css"
+import "./index.css";
 
-import logo from "../../img/shopping.svg"
-import menu from "../../img/Hamburger_icon.svg"
-import title from "../../img/header.webp"
+import logo from "../../img/shopping.svg";
+import menu from "../../img/Hamburger_icon.svg";
+import title from "../../img/2_objects.png";
+import mobileTitle from "../../img/Logo.svg";
 
 const Header = (props) => {
 
@@ -30,6 +31,7 @@ const Header = (props) => {
     }
 
     let checkoutRef = useRef();
+    let mobileMenu = useRef();
 
     const updateName = (event) => {
         props.updateName(event.target.value);
@@ -94,7 +96,7 @@ const Header = (props) => {
         }
     }
 
-    // Handle closing of lightbox
+    // Handle closing of ordering screen
     useEffect(() => {
         let handler = (e) => {
             if(checkoutRef.current && !checkoutRef.current.contains(e.target) ) {
@@ -109,6 +111,21 @@ const Header = (props) => {
             document.removeEventListener("mousedown", handler);
         }
     })
+
+    useEffect(() => {
+        let handler = (e) => {
+            if(mobileMenu.current && !mobileMenu.current.contains(e.target) ) {
+                props.closeMobileNavBar();
+            }
+        };
+    
+        document.addEventListener("mousedown", handler);
+    
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        }
+    })
+
 
     // Update order quantity
     const updateQty = (event, type, val) => {
@@ -182,7 +199,7 @@ const Header = (props) => {
     }
 
     return (   
-        <div>
+        <>
             {showOrderScreen && 
             <div id="orderScreen">
                 <div ref={checkoutRef} id="orderContainer">
@@ -232,16 +249,16 @@ const Header = (props) => {
                         </div>
                     </div>
                 </div>
+                <p>X</p>
             </div>}
 
-            <header id="home">
+            <header>
 
-                <img id="titlePage" src={title} alt="Title Page"/>
 
                 <nav id="nav-wrap" style={{display: props.showNav}}>
                     <p>3Y Brick Veneer</p>
 
-                    <ul id="nav" style={{display: props.showMobile}}>
+                    <ul ref={mobileMenu} id="nav" style={{display: props.showMobile}}>
                         <li><a tabIndex={0} href="#home">Home</a></li>
                         <li><a tabIndex={0} href="#intro">About</a></li>
                         <li><a tabIndex={0} href="#price">Pricing</a></li>
@@ -250,13 +267,17 @@ const Header = (props) => {
                     </ul>
                     
                     <img onClick={() => props.toggleMobileNavBar()} className="navIcon" id="hamburgerIcon" src={menu} alt="shopping cart"/>
-                    <img onClick={toggleOrderScreen} className="navIcon" id="shoppingCart" src={logo} alt="shopping cart"/>
+                    <img tabIndex={"0"} onClick={toggleOrderScreen} className="navIcon" id="shoppingCart" src={logo} alt="shopping cart"/>
                 </nav>
 
             </header>    
-        </div>
-    )
 
+            <div id="home">
+                <img id="desktop" src={title} alt="Title Page"/>
+                <img id="mobile" src={mobileTitle} alt="Title Page"/>
+            </div>
+        </>
+    )
 };
 
 export default Header
