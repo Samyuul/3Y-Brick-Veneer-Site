@@ -189,6 +189,9 @@ ul#nav li a:focus {
 
     display: flex;
     flex-direction: row;
+
+    overflow: auto;
+    border-radius: 25px;
 }
 
 #quantitySection {
@@ -278,7 +281,7 @@ input[type=number] {
 
 .formCell a ~ p {
     visibility: visible;
-    color: red;
+    color: red !important;
 }
 
 .formCell a ~ label {
@@ -370,6 +373,22 @@ input[type=number] {
 
     #hamburgerIcon {
         display: block;
+    }
+
+    #orderScreen {
+        font-size: 12px;
+    }
+
+    #orderScreen p {
+        font-size: 12px;
+    }
+
+    .formCell {
+        font-size: 12px;
+    }
+
+    .formCell input {
+        font-size: 12px;
     }
 
 }
