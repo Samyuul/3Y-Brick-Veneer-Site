@@ -24,6 +24,28 @@ h1::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-size: 1.25rem;
+}
+
+#gallery h1 {
+    width: 100%;
+    color: white;
+    margin-top: 50px;
+}
+
+#gallery p {
+    color: white;
+    margin: 0;
+    width: 90%;
+    text-align: justify;
+}
+
+.gallery-text {
+    color: black !important;
 }
 
 #flexboxGallery {
@@ -61,6 +83,9 @@ h1::after {
         width: 9% !important;
     }
 
+    #modalCaption {
+        font-size: .75rem !important;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -139,6 +164,11 @@ h1::after {
         left: calc(50vw + 10px);
         width: 3vw !important;
     }
+
+    .displayCounter {
+        width: 40% !important;
+    }
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -157,6 +187,14 @@ h1::after {
         height: calc(4/3 * 25vw + 4vh);
         left: calc(50vw + 10px);
     }
+
+    #displayCounter {
+        width: 38% !important;
+    }
+
+    .incrementButton {
+        width: 6% !important;
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -174,6 +212,14 @@ h1::after {
     .brickSelect {
         height: calc(4/3 * 25vw + 4vh);
         left: calc(50vw + 10px);
+    }
+
+    #displayCounter {
+        width: 38% !important;
+    }
+
+    .incrementButton {
+        width: 6% !important;
     }
 }
 
@@ -299,24 +345,22 @@ h1::after {
     height: 100%;
     object-fit: cover;
     outline: none;
-    width: 4%;
+    width: 9%;
     height: 4vh;
     border: none;
     font-size: 2vh;
     display: inline-block;
+
 }
 
 #displayCounter {
     object-fit: cover;
     font-size: 2vh;
     display: inline-block;
-    width: 42%;
+    width: 32%;
     height: 4vh;
 
     box-sizing: border-box;
-}
-
-#displayCounter {
     text-align: center;
 }
 

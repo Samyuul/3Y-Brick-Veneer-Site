@@ -22,8 +22,8 @@ const GetOrder = (props) => {
     const getGalleryCell = (i) => {
         return (
             <div key={i} className="galleryCell">
-                <div className="stockCounter">{props.quantity[i]} <p>Ord</p>
-                    <div>{props.stock[i]} <p>Left</p></div>
+                <div className="stockCounter">{props.quantity[i]} <p className="gallery-text">Ord</p>
+                    <div>{props.stock[i]} <p className="gallery-text">Left</p></div>
                 </div>
                 <div className="brickImage">
                     <img alt="Brick Gallery" onClick={() => toggleLightboxOn(i)} src={getImage(1, i)}/>
@@ -55,7 +55,12 @@ const GetOrder = (props) => {
                 stock={props.stock[props.currLightboxSelect]}
                 getImage={getImage}
             />}
-z
+
+            <h1>Gallery</h1>
+            <p>
+                If the current stock has loaded yet, please give it a minute for it to load. In the meanwhile, you
+                can browse our gallery below.
+            </p>
             <div id="flexboxGallery">
                 {getGallery()}
             </div>
