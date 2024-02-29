@@ -15,7 +15,6 @@ const Intro = () => {
     }
 
     const incrementImage = (n) => {
-        console.log("success");
         setSlide(modulo(slide + n, 5));
     } 
 

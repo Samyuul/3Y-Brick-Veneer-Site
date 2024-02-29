@@ -159,6 +159,9 @@ const Header = (props) => {
                     <td>$ {(i !== 9) ? (val * 50).toFixed(2) : (val * 2).toFixed(2)}</td>
                 </tr>)
             }
+            else {
+                return (<></>)
+            }
         })
     }
 
@@ -222,21 +225,21 @@ const Header = (props) => {
                         <div id="infoSection">
                     
                             <div className="formCell">
-                                {errorArray.flags[0] && <a></a>}
+                                {errorArray.flags[0] && <div></div>}
                                 <label>Name:</label>
                                 <input onChange={updateName} id="userName"/>
                                 <p>{errorArray.msg[0]}</p>
                             </div>
 
                             <div className="formCell">
-                                {errorArray.flags[1] && <a></a>}
+                                {errorArray.flags[1] && <div></div>}
                                 <label>Phone Number:</label>
                                 <input onChange={updatePhone} id="userNumber"/>
                                 <p>{errorArray.msg[1]}</p>
                             </div>
                             
                             <div className="formCell">
-                                {errorArray.flags[2] && <a></a>}
+                                {errorArray.flags[2] && <div></div>}
                                 <label>Preferred Meeting Date:</label>
                                 <input onChange={updateDate} type="datetime-local" id="userDate"/>
                                 <p>{errorArray.msg[2]}</p>
@@ -263,7 +266,7 @@ const Header = (props) => {
                         <li><a tabIndex={0} href="#intro">About</a></li>
                         <li><a tabIndex={0} href="#price">Pricing</a></li>
                         <li><a tabIndex={0} href="#gallery">Gallery</a></li>
-                        <li><a tabIndex={0} href="#contact">Contact Us</a></li>
+                        <li><a tabIndex={0} href="#location">Location</a></li>
                     </ul>
                     
                     <img onClick={() => props.toggleMobileNavBar()} className="navIcon" id="hamburgerIcon" src={menu} alt="shopping cart"/>

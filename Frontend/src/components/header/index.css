@@ -143,12 +143,11 @@ ul#nav li a:focus {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: auto;
     background-color: #0D1B2A;
 
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -178,6 +177,8 @@ ul#nav li a:focus {
 
     background-color: #778DA9;
 
+    min-height: 700px;
+    margin-top: 50px;
 }
 
 #orderLayout {
@@ -269,7 +270,7 @@ input[type=number] {
     box-sizing: border-box;
 }
 
-.formCell a ~ input {
+.formCell div ~ input {
     border: 2px solid red;
     box-sizing: border-box;
 }
@@ -279,12 +280,12 @@ input[type=number] {
     visibility: hidden;
 }
 
-.formCell a ~ p {
+.formCell div ~ p {
     visibility: visible;
     color: red !important;
 }
 
-.formCell a ~ label {
+.formCell div ~ label {
     color: red;
 }
 

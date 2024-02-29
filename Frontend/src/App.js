@@ -36,8 +36,8 @@ function App() {
 	const [showNav, setShowNav] = useState("block");
 	const [showMobile, setShowMobile] = useState("none");
 
-    const [quantity, setQuantity] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-	//const [quantity, setQuantity] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    //const [quantity, setQuantity] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+	const [quantity, setQuantity] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 	const [stock, setStock] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
