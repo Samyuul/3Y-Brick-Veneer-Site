@@ -1,0 +1,429 @@
+/* ------------------------------------------------------------------------*/
+/* ---------------------- Styling for Brick Gallery -----------------------*/
+/* ------------------------------------------------------------------------*/
+h1::after {
+    content: "";
+    width: 25%;
+    height: 1px;
+    bottom: 0;
+    
+    margin: auto;
+    border-bottom: 5px solid #0d1b2a;
+
+    position: relative;
+    display: block;
+
+    max-width: 5rem;
+    margin-top: 10px;
+}
+
+#gallery {
+    width: 100%;
+    background-color: #778DA9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flexboxGallery {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 90%;
+        gap: 14px;
+    }
+
+    .modalContent {
+        width: 90vw !important;
+    }
+
+    .brickSelect {
+        width: 90vw !important; 
+        top: auto !important;
+
+        position: absolute;
+        flex-direction: row !important;
+    
+        margin-top: 10px !important;
+    }
+
+    .colorButton {
+        width: 9% !important;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 576px;
+        gap: 18px;
+    }
+
+    .modalContent {
+        width: 80vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 40vw + 4vh);
+        left: calc(80vw + 10px);
+        width: 4.5vw !important;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 720px;
+        gap: 20px;
+    }
+
+    .modalContent {
+        width: 70vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 35vw + 4vh);
+        left: calc(70vw + 10px);
+        width: 4vw !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 960px;
+        gap: 24px;
+    }
+
+    .modalContent {
+        width: 60vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 30vw + 4vh);
+        left: calc(60vw + 10px);
+        width: 4vw !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #flexboxGallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 1140px;
+        gap: 30px;
+    }
+
+    .modalContent {
+        width: 50vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 25vw + 4vh);
+        left: calc(50vw + 10px);
+        width: 3vw !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 1378px;
+        gap: 36px;
+    }
+
+    .modalContent {
+        width: 50vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 25vw + 4vh);
+        left: calc(50vw + 10px);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #flexboxGallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 1478px;
+        gap: 40px;
+    }
+
+    .modalContent {
+        width: 50vw !important;
+    }
+
+    .brickSelect {
+        height: calc(4/3 * 25vw + 4vh);
+        left: calc(50vw + 10px);
+    }
+}
+
+.galleryCell {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    justify-self: center;
+    align-self: center;
+
+    cursor: pointer;
+}
+
+.brickImage {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #e0e1dd;
+    border-radius: 5%;
+}
+
+.brickImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.stockCounter {
+    background-color: white;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+
+    position: absolute;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    width: 7rem;
+    border-radius: 10px;
+}
+
+.stockCounter p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* ------------------------------------------------------------------------*/
+/* ---------------------- Styling for Lightbox Gallery --------------------*/
+/* ------------------------------------------------------------------------*/
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+}
+
+.lightboxImg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for Lightbox Arrow Controls */
+.prev {
+    color: white;
+    position: absolute;
+    top: calc(32%);
+    left: calc(0vh);
+    font-size: 5vh;
+    border-radius: 0 1vh 1vh 0;
+    background-color: transparent;
+
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0.5vh 1vh 1vh 1vh ;
+}
+
+.prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.6s ease;
+}
+
+.next {
+    color: white;
+    position: absolute;
+    top: calc(32%);
+    right: calc(0vh);
+    font-size: 5vh;
+    border-radius: 1vh 0 0 1vh;
+    background-color: transparent;
+
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0.5vh 1vh 1vh 1vh ;
+
+}
+
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.6s ease;
+}
+
+/* Quantity Selector */
+.info {
+    height: 4vh;
+    background-color: lightgray;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.incrementButton {
+    height: 100%;
+    object-fit: cover;
+    outline: none;
+    width: 4%;
+    height: 4vh;
+    border: none;
+    font-size: 2vh;
+    display: inline-block;
+}
+
+#displayCounter {
+    object-fit: cover;
+    font-size: 2vh;
+    display: inline-block;
+    width: 42%;
+    height: 4vh;
+
+    box-sizing: border-box;
+}
+
+#displayCounter {
+    text-align: center;
+}
+
+#modalCaption {
+    position: relative;
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+}
+
+.thumbnail {
+    width: calc(100% / 3);
+    object-fit: contain;
+}
+
+.thumbnailControls {
+    width: 100%;
+    aspect-ratio: 6;
+    background-color: black;
+}
+
+.numberText {
+    color: black;
+    font-size: 2rem;
+    position: absolute;
+    top: 0.7vh;
+    right: 0.7vh;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.modalContent {
+    background-color: gray;
+    width: 50vw;
+    position: relative;
+}
+
+/* Styling for Brick Thumbnail Select  */
+.brickSelect {
+
+    position: absolute;
+    top: 0vh;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 3vw;
+}
+
+.brickThumbnail {
+    width: 10vh;
+    height: 10vh;
+}
+
+.colorButton {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid gray;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5vh;
+
+}
+
+.colorButton:hover {
+    background-image: none;
+    background-color: black;
+}
+
+.whiteSelect {
+    background-color: #bba99b;
+}
+
+.sandSelect {
+    background-color: #ba9f81;
+}
+
+.redSelect {
+    background-color: #6b3324
+}
+
+.peachSelect {
+    background-color: #c48e54;
+}
+
+.graySelect {
+    background-color: #343331;
+}
+
+.darkSelect {
+    background-color: #503529;
+}
+
+.coffeeSelect {
+    background-color: #7c573d;
+}
+
+.mixedSelect {
+    background-image: linear-gradient(90deg, #a35838 0 50%, #6d3d2e 50% 100%);
+}
+
+.indoorSelect {
+    background-image: linear-gradient(90deg, #b77456 0 30%, #6c6461 30% 70%, #7d493b 70% 100%)
+}
+
