@@ -42,6 +42,7 @@ h1::after {
     margin: 0;
     width: 90%;
     text-align: justify;
+    text-align-last: center;
 }
 
 .gallery-text {
