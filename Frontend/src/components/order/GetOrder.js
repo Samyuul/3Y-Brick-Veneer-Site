@@ -59,7 +59,7 @@ const GetOrder = (props) => {
             <h1>Gallery</h1>
             <p>
                 If the current stock has loaded yet, please give it a minute for it to load. In the meanwhile, you
-                can browse our gallery below.
+                can browse our gallery below. The value for stock are estimates given in units of boxes (10.75 sqft each).
             </p>
             <div id="flexboxGallery">
                 {getGallery()}
