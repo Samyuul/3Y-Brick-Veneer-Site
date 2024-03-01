@@ -156,7 +156,7 @@ const Header = (props) => {
                 <tr key={i} className={"brickRow " + colorClasses[i]}>
                     <td>{props.desc[i]}</td>
                     <td><input onChange={(e) => {updateQty(e, i, val)}} value={val}></input></td>
-                    <td>$ {(i !== 9) ? (val * 50).toFixed(2) : (val * 2).toFixed(2)}</td>
+                    <td>$ {(i !== 9) ? (val * 58).toFixed(2) : (val * 2).toFixed(2)}</td>
                 </tr>)
             }
             else {
@@ -170,7 +170,7 @@ const Header = (props) => {
 
         let sumBoxes = props.quantity.slice(0, 9).reduce((sum, v) => sum + v);
         let sqft = sumBoxes * 10.75;
-        let subtotal = (sumBoxes * 52 + 2 * props.quantity[9]).toFixed(2);
+        let subtotal = (sumBoxes * 58 + 2 * props.quantity[9]).toFixed(2);
 
         if (sumBoxes !== 0 || props.quantity[9] !== 0)
         {
@@ -180,7 +180,7 @@ const Header = (props) => {
                 <tr>
                     <td></td>
                     <td>Sqft:</td>
-                    <td>{sqft} sqft</td>
+                    <td>{sqft}</td>
                 </tr> 
                 <tr>
                     <td></td>

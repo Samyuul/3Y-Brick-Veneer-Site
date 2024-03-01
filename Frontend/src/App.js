@@ -105,7 +105,7 @@ function App() {
 
 		num_boxes = quantity.reduce((a, b) => a + b, 0);
 		numSqft = num_boxes * 10.75;
-		totalCost = (num_boxes * 50 * 1.13).toFixed(2);
+		totalCost = (num_boxes * 58 * 1.13).toFixed(2);
 
 		test_order = {
 			name: name, 
