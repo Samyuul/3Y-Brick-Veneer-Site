@@ -226,21 +226,21 @@ const Header = (props) => {
                     
                             <div className="formCell">
                                 {errorArray.flags[0] && <div></div>}
-                                <label>Name:</label>
+                                <label for="userName">Name:</label>
                                 <input onChange={updateName} id="userName"/>
                                 <p>{errorArray.msg[0]}</p>
                             </div>
 
                             <div className="formCell">
                                 {errorArray.flags[1] && <div></div>}
-                                <label>Phone Number:</label>
+                                <label for="userNumber">Phone Number:</label>
                                 <input onChange={updatePhone} id="userNumber"/>
                                 <p>{errorArray.msg[1]}</p>
                             </div>
                             
                             <div className="formCell">
                                 {errorArray.flags[2] && <div></div>}
-                                <label>Preferred Meeting Date:</label>
+                                <label for="userDate">Preferred Meeting Date:</label>
                                 <input onChange={updateDate} type="datetime-local" id="userDate"/>
                                 <p>{errorArray.msg[2]}</p>
                             </div>
