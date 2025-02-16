@@ -3,7 +3,7 @@ import "./index.css";
 
 import logo from "../../img/shopping.svg";
 import menu from "../../img/Hamburger_icon.svg";
-import title from "../../img/2_objects.png";
+import title from "../../img/TitleImage.jpg";
 import mobileTitle from "../../img/Logo.svg";
 
 const Header = (props) => {
@@ -257,7 +257,6 @@ const Header = (props) => {
 
             <header>
 
-
                 <nav id="nav-wrap" style={{display: props.showNav}}>
                     <p>3Y Brick Veneer</p>
 
@@ -276,6 +275,19 @@ const Header = (props) => {
             </header>    
 
             <div id="home">
+                <div className="centered">
+                    <div>
+                        <h2>
+                            3Y Brick Veneer
+                        </h2>
+                        <h1>
+                            High Quality and Affordable
+                        </h1>
+                        <p>
+                            Perfect for Small Personal Projects or Larger Commerical Projects
+                        </p>
+                    </div>
+                </div>
                 <img id="desktop" src={title} alt="Title Page"/>
                 <img id="mobile" src={mobileTitle} alt="Title Page"/>
             </div>

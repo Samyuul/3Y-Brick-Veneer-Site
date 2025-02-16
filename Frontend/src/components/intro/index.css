@@ -14,7 +14,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
@@ -24,7 +24,10 @@ body {
 
 #introDesc {
     width: 50%;
-    margin-bottom: 40px;
+    margin: 40px 20px;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
 }
 
 #intro p {
@@ -75,7 +78,7 @@ body {
 }
 
 .rightGallery {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 15px 15px 0;
 }
 
 .rightGallery:hover {

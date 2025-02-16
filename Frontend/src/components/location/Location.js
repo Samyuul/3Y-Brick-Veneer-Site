@@ -30,6 +30,9 @@ const Location = () => {
 
     return(
         <div id="contact">
+            <h1>
+                Our Locations
+            </h1>
             <div id="location">
                 <div id="address">
                     <address tabIndex={"0"} onClick={() => setCenter({lat: 43.30410903683898, lng: -79.86780663703834})}>
