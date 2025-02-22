@@ -4,7 +4,7 @@ const cors = require("cors");       // Import cors
 
 // Specify browser 
 var corsOptions = {
-    origin: "https://3y-brick-veneer-website.netlify.app"
+    origin: process.env.REACT_APP_CORS_URL
 };
 
 app.use(cors(corsOptions));
