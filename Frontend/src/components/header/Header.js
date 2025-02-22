@@ -257,10 +257,10 @@ const Header = (props) => {
 
             <header>
 
-                <nav id="nav-wrap" style={{display: props.showNav}}>
+                <nav ref={mobileMenu} id="nav-wrap" style={{display: props.showNav}}>
                     <p>3Y Brick Veneer</p>
 
-                    <ul ref={mobileMenu} id="nav" style={{display: props.showMobile}}>
+                    <ul id="nav" style={{display: props.showMobile}}>
                         <li><a tabIndex={0} href="#home">Home</a></li>
                         <li><a tabIndex={0} href="#intro">About</a></li>
                         <li><a tabIndex={0} href="#price">Pricing</a></li>
@@ -276,7 +276,7 @@ const Header = (props) => {
 
             {!showOrderScreen && <div id="home">
                 <div className="centered">
-                    <div>
+                    <div id="title-page">
                         <h2>
                             3Y Brick Veneer
                         </h2>
