@@ -11,22 +11,15 @@ const Intro = () => {
     } 
 
     const getImage = () => {
-        return require(`./../../img/gallery4/${slide}.webp`);
+        return require(`./../../img/gallery4/${slide}.jpg`);
     }
 
     const incrementImage = (n) => {
-        setSlide(modulo(slide + n, 5));
+        setSlide(modulo(slide + n, 6));
     } 
 
     return (
         <div id='intro'>
-
-            <div id='demoGallery'>
-                <div className="leftGallery galleryArrow" onClick={() => incrementImage(-1)}>&#10094;</div>
-                <img id='galleryImg' src={getImage()} alt='Brick Demo'/>
-                <div className="rightGallery galleryArrow" onClick={() => incrementImage(1)}>&#10095;</div>
-            </div>
-
             <div id='introDesc'>
                 <h1>About Us</h1>
 
@@ -44,6 +37,12 @@ const Intro = () => {
                     You can set up an appointment to come in and see our wares. We will directly text you the address once we have decided
                     a time.
                 </p>
+            </div>
+
+            <div id='demoGallery'>
+                <div className="prev-arrow" onClick={() => incrementImage(-1)}>&#10094;</div>
+                <img id='galleryImg' src={getImage()} alt='Brick Demo'/>
+                <div className="next-arrow" onClick={() => incrementImage(1)}>&#10095;</div>
             </div>
 
         </div>

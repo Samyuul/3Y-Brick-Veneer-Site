@@ -14,20 +14,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: flex;
-    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
     font-size: 1.25rem;
+
+    padding: 25px auto;
 }
 
 #introDesc {
     width: 50%;
-    margin: 40px 20px;
-    border-radius: 25px;
-    background-color: white;
-    color: black;
+    color: white;
+
+    margin-bottom: 40px;
 }
 
 #intro p {
@@ -42,13 +42,54 @@ body {
     width: 45%;
 
     display: flex;
-    margin: 30px auto;
+    position: relative;
 
+    margin: 30px auto;
 }
 
 #galleryImg {
-    width: 90%;
+    width: 100%;
     object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.prev-arrow {
+    position: absolute;
+    left: 0;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px 0 0 25px;
+    opacity: 0.35;
+
+    background-color: black;
+    padding: 0 15px;
+}
+
+.next-arrow {
+    position: absolute;
+    right: 0;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0 25px 25px 0;
+    opacity: 0.35;
+
+    background-color: black;
+    padding: 0 15px;
+}
+
+.next-arrow:hover, .prev-arrow:hover {
+    opacity: 0.65;
 }
 
 .galleryArrow {

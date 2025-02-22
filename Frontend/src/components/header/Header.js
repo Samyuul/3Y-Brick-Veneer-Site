@@ -3,7 +3,7 @@ import "./index.css";
 
 import logo from "../../img/shopping.svg";
 import menu from "../../img/Hamburger_icon.svg";
-import title from "../../img/TitleImage.jpg";
+import title from "../../img/TitleImage.webp";
 import mobileTitle from "../../img/Logo.svg";
 
 const Header = (props) => {
@@ -274,7 +274,7 @@ const Header = (props) => {
 
             </header>    
 
-            <div id="home">
+            {!showOrderScreen && <div id="home">
                 <div className="centered">
                     <div>
                         <h2>
@@ -290,7 +290,7 @@ const Header = (props) => {
                 </div>
                 <img id="desktop" src={title} alt="Title Page"/>
                 <img id="mobile" src={mobileTitle} alt="Title Page"/>
-            </div>
+            </div>}
         </>
     )
 };

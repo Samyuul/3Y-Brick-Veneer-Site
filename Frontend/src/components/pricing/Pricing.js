@@ -5,6 +5,7 @@ const Pricing = () => {
 
     return (
         <div id="price">
+            <img src={require("./../../img/gallery3/10.webp")} alt="Indoor Corners"/>
             <div id="desc">
                 <h1>Pricing</h1>
                 <p>
@@ -16,7 +17,6 @@ const Pricing = () => {
 
                 </p>
             </div>
-            <img src={require("./../../img/gallery3/10.webp")} alt="Indoor Corners"/>
         </div>
     )
 
