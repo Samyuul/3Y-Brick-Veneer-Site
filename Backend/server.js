@@ -1,10 +1,12 @@
+require("dotenv").config();
+
 const express = require("express"); // Import express
 const app = express();
 const cors = require("cors");       // Import cors
 
 // Specify browser 
 var corsOptions = {
-    origin: "https://www.3ybrickveneer.ca"
+    origin: process.env.REACT_APP_CORS_URL
 };
 
 app.use(cors(corsOptions));
