@@ -2,14 +2,14 @@ const express = require("express"); // Import express
 const app = express();
 const cors = require("cors");       // Import cors
 
-// Specify browser - Hidden cors
+// Specify browser 
 var corsOptions = {
-    origin: process.env.REACT_APP_CORS_URL
+    origin: "https://www.3ybrickveneer.ca"
 };
 
 app.use(cors(corsOptions));
 
-// Parse requests of content-type - application / json 
+// Parse requests of content-type - application / json
 app.use(express.json());
 
 // Parse requests of content-type - application / x-www-form-urlencoded
